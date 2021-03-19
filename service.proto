@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+service Calculator {
+  rpc Solve(EquationMessage) returns (EquationCalculatedMessage) {}
+}
+
+message EquationMessage {
+  double A = 1;
+  double B = 2;
+  double C = 3;
+}
+
+message EquationCalculatedMessage {
+  double x1 = 1;
+  double x2 = 2;
+  bool realSolutionExists = 3;
+}
